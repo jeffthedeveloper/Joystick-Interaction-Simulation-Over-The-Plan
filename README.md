@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização do Joystick - Posição Inicial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .cartesian-plane {
+            width: 400px;
+            height: 400px;
+            border: 2px solid #000;
+            position: relative;
+            background-color: #fff;
+        }
+
+        .axis {
+            position: absolute;
+            background-color: #000;
+        }
+
+        .horizontal-line {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+        }
+
+        .vertical-line {
+            height: 100%;
+            width: 2px;
+            left: 50%;
+        }
+
+        .joystick {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Interação do Joystick no Plano Cartesiano</h1>
+    <div class="cartesian-plane">
+        <div class="axis horizontal-line"></div>
+        <div class="axis vertical-line"></div>
+        <div id="joystick" class="joystick" style="left: 200px; top: 200px;"></div>
+    </div>
+    <p>Posição do Joystick: (0, 0)</p>
+</div>
+
+</body>
+</html>
